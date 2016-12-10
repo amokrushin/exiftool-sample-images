@@ -13,7 +13,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "exit 0"
+    "test": "exit 0",
+    "git-reset": "git reset --hard HEAD && git clean -df && git pull"
   },
   "author": "Anton Mokrushin <anton@mokr.org> (http://mokr.org/)",
   "license": "MIT"
