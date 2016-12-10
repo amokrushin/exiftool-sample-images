@@ -1,6 +1,6 @@
 {
   "name": "exiftool-sample-images",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Download and extract ExifTool sample images to the target dir",
   "main": "index.js",
   "bin": {
