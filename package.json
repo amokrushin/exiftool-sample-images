@@ -1,0 +1,20 @@
+{
+  "name": "exiftool-sample-images",
+  "version": "0.1.0",
+  "description": "Download and extract ExifTool sample images to the target dir",
+  "main": "index.js",
+  "bin": {
+    "exiftool-sample-images": "./bin/cmd.js"
+  },
+  "dependencies": {
+    "async": "^2.1.4",
+    "ora": "^0.3.0",
+    "tar-fs": "^1.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "exit 0"
+  },
+  "author": "Anton Mokrushin <anton@mokr.org> (http://mokr.org/)",
+  "license": "MIT"
+}
