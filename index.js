@@ -39,14 +39,13 @@ function download(targetDir, callback) {
     const spinner = ora('Loading list of archives').start();
     async.waterfall([
         loadUrls,
-        (urls, cb) => cb(null, urls.slice(0, 1)),
         (urls, cb) => async.eachSeries(urls, (url, next) => {
             const filename = path.basename(url);
             spinner.text = `Downloading and extracting ${filename}`;
             request(url, res => res
                 .pipe(createGunzip())
                 .pipe(extract(targetDir, { readable: true }))
-                .on('finish', next),
+                .on('finish', next)
             ).on('error', cb).end();
         }, cb),
     ], (err) => {
